@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TampilData extends StatelessWidget {
-  final String data; //contoh data yang di-passing
+  final Map<String, String> data; //contoh data yang di-passing
   
   const TampilData({Key? key, required this.data}) : super(key: key);
 
@@ -11,6 +11,13 @@ class TampilData extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Perkenalan"),
       ),
+      body: Column(
+          children: [
+            Text(
+              "Nama saya ${data['nama']}, NIM ${data['nim']}, dan umur saya adalah ${data['umur']} ",
+            ),
+          ],
+        ),
     );
   }
 }
